@@ -85,21 +85,146 @@ relationships between genes, e.g.::
 collect this sort of data (e.g. Trypanosomes.)</li>
 <li>In principle, genes which are co-regulated should show some similarities in
 their expression profiles.</li>
-<li><span class='red'>Is it possible instead to infer gene-regulatory relationships from
-transcriptomic data such as Microarray or RNA-Seq?</span></li>
+<li><span class='red'>Is it possible instead to infer gene-regulatory 
+relationships from transcriptomic data such as Microarray or RNA-Seq?</span></li>
+<li><span class='red'>Can functional information be used to improve this
+inference?</span></li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="references" id="slide-2" style="background:;">
+<slide class="segue dark" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/Lee_F1.large.jpg" alt="Lee figure 1"></p>
+
+<ul>
+<li>Lee et al. describe an early use of chromatin immunoprecipitation
+with microarray technology (ChIP-chip) to query the targets of a set of
+known transcription factors in yeast.</li>
+<li>ChIP-chip limitations (likely improved since the time of writing):
+
+<ul>
+<li>Requires regulators (TFs) and target promoters to be known</li>
+<li>Tagging doesn&#39;t always work (non-viable cells/inadequate expression)</li>
+<li>False positives (~5-6% for high stringency cutoff)</li>
+<li>False negatives (~33% estimated for same stringency)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/Lee_F2.med.jpg" alt="Lee figure 2"></p>
+
+<ul>
+<li>Regulator/promoter relationships are many-to-many:
+
+<ul>
+<li>Average of 38 promoters bound by a given regulator</li>
+<li>More than 1/3 of promoter regions bound by 2+ TFs</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Data sources</h3>
+
+<ul>
+<li>Downloaded all public microarray data for <em>S. cerevisiae</em> (Stanford
+Microarray Database)</li>
+<li>Excluded genes with no known TFs:
+
+<ul>
+<li>611 arrays</li>
+<li>2284 genes</li>
+</ul></li>
+<li>Downloaded Lee et al&#39;s TF binding data:
+
+<ul>
+<li>6270 genes (4532 promoters)</li>
+<li>106 TFs</li>
+</ul></li>
+</ul>
+
+<h3>Measuring co-expression</h3>
+
+<ul>
+<li>Expression data median-centered over all arrays.</li>
+<li>Pearson correlation of expression profiles measured:
+
+<ul>
+<li>2284 x 2284 symmetric matrix</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/1471-2105-5-18-1.jpg" alt="Allocco fig 1"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="references" id="slide-9" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
   <article data-timings="">
     <ul>
 <li>Dominic J Allocco, Isaac S Kohane, Atul J Butte,   (2004) Unknown.  <em>Bmc Bioinformatics</em>  <strong>5</strong>  18-NA  <a href="http://dx.doi.org/10.1186/1471-2105-5-18">10.1186/1471-2105-5-18</a></li>
+<li>T. I. Lee,   (2002) Transcriptional Regulatory Networks in Saccharomyces Cerevisiae.  <em>Science</em>  <strong>298</strong>  799-804  <a href="http://dx.doi.org/10.1126/science.1075090">10.1126/science.1075090</a></li>
 </ul>
 
   </article>
@@ -118,8 +243,50 @@ transcriptomic data such as Microarray or RNA-Seq?</span></li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='References'>
+        data-slide=2 title='Background'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Results'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Co-expression and co-regulation'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Co-expression and co-regulation'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title=''>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='References'>
+         9
       </a>
     </li>
   </ul>

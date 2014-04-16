@@ -46,9 +46,72 @@ $(function() {
 >  collect this sort of data (e.g. Trypanosomes.)
 >- In principle, genes which are co-regulated should show some similarities in
 >  their expression profiles.
->- <span class='red'>Is it possible instead to infer gene-regulatory relationships from
->  transcriptomic data such as Microarray or RNA-Seq?</span>
+>- <span class='red'>Is it possible instead to infer gene-regulatory 
+>  relationships from transcriptomic data such as Microarray or RNA-Seq?</span>
+>- <span class='red'>Can functional information be used to improve this
+>  inference?</span>
 
+--- .segue .dark
+
+## Background
+
+---
+
+## Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)
+
+![Lee figure 1](assets/img/Lee_F1.large.jpg)
+
+- Lee et al. describe an early use of chromatin immunoprecipitation
+  with microarray technology (ChIP-chip) to query the targets of a set of
+  known transcription factors in yeast.
+- ChIP-chip limitations (likely improved since the time of writing):
+  - Requires regulators (TFs) and target promoters to be known
+  - Tagging doesn't always work (non-viable cells/inadequate expression)
+  - False positives (~5-6% for high stringency cutoff)
+  - False negatives (~33% estimated for same stringency)
+
+---
+
+## Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)
+
+![Lee figure 2](assets/img/Lee_F2.med.jpg)
+
+- Regulator/promoter relationships are many-to-many:
+  - Average of 38 promoters bound by a given regulator
+  - More than 1/3 of promoter regions bound by 2+ TFs
+
+--- .segue .dark
+
+## Results
+
+---
+
+## Co-expression and co-regulation
+
+### Data sources
+
+- Downloaded all public microarray data for *S. cerevisiae* (Stanford
+  Microarray Database)
+- Excluded genes with no known TFs:
+  - 611 arrays
+  - 2284 genes
+- Downloaded Lee et al's TF binding data:
+  - 6270 genes (4532 promoters)
+  - 106 TFs
+
+### Measuring co-expression
+
+- Expression data median-centered over all arrays.
+- Pearson correlation of expression profiles measured:
+    - 2284 x 2284 symmetric matrix
+
+---
+
+## Co-expression and co-regulation
+
+![Allocco fig 1](assets/img/1471-2105-5-18-1.jpg)
+
+---
 
 ---.references
 
@@ -58,6 +121,7 @@ $(function() {
 library(knitcitations)
 cleanbib()
 citep('10.1186/1471-2105-5-18')
+citep('10.1126/science.1075090')
 ```
 
 ```{r refs_output, echo=FALSE, results='asis'}

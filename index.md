@@ -4,11 +4,14 @@ title       : Quantifying the relationship between co-expression, co-regulation
 subtitle    : Dominic J Allocco, Isaac S Kohane and Atul J Butte
 author      : Keith Hughitt
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
+framework   : io2012
+highlighter : highlight.js
+hitheme     : tomorrow
 mode        : selfcontained 
-widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax]
+github      : 
+  user: khughitt
+  repo: slidify-co-expr_co-reg_relationship
 ---
 
 <!-- Custom Styles -->
@@ -244,11 +247,33 @@ $(function() {
     - GO level measure becomes problematic with respect to the variability in
       inclusiveness between the different ontologies.
 
+---.segue .dark
 
+## Conclusions
 
+---
 
+## Questions (of mine...)
 
+1. How different would the picture be if an improved measure of functional
+   similarity (e.g. as provided by GOSim), were used?
+2. How would results look today if re-run as-is, with improvements made to GO
+   over the past ten years?
+3. Could a better result be achieved if the correlations of multiple subsamples
+   were combined additively instead of treating them independently?
+4. What implications do these results have for systems which do not regulate
+   genes at the promoter level?
+5. Big picture: What would be required to accurately model expression data
+   including co-expression relationships? (would vary between species).
 
+---
+
+## Atul Butte talk
+
+<a href='http://www.tedmed.com/talks/show?id=7340'>
+    <img src='http://img.youtube.com/vi/dtNMA46YgX4/0.jpg' border=0/><br/>
+    What if you outsource three double-blind mice? (TEDMED 2012)
+</a><br/>
 
 ---.references
 

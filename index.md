@@ -88,6 +88,10 @@ $(function() {
 
 ## Results
 
+--- .segue .dark
+
+## Co-expression and co-regulation
+
 ---
 
 ## Co-expression and co-regulation
@@ -152,7 +156,7 @@ $(function() {
 
 ## Co-expression and co-regulation
 
-### Sub-sampling
+### Effect of adding more datasets
 
 - Initially all 611 microarrays used to calculate correlations
 - What would be the effect of using a smaller set of data?
@@ -162,25 +166,83 @@ $(function() {
     2. Experiments related to cell-cycle, starvation, and stress.
 - In general, adding more experiments increased sensitivity, although after
   ~100 experiments, you don't gain much more.
+- Note: One thing they did not do is to test the effect of combining results
+  from multiple sub-samples (e.g. using max{cor}.)
 
 ---
 
 ## Co-expression and co-regulation
 
+### Effect of adding more datasets
+
 ![Allocco fig 3](assets/img/1471-2105-5-18-3.jpg)
 <span class='caption'>Allocco et al. (2004) Figure 3</span>
 
+--- .segue .dark
 
+## Functional similarity vs. co-regulation
 
+---
 
+## Functional similarity vs. co-regulation
 
+### Measuring functional similarity
 
+- In order to determine the relationship between co-regulation and function
+  similarity, you must first decide how to measure functional similarity.
+- Allocco et al. came up with two Gene Ontology (GO) based measures of
+  similarity:
 
+#### 1. Minimum node count
 
+- For each GO term, how many times does it (or a descendant of it) appear in
+  the data set?
+- Minimum node count for a pair of genes in the value of the smallest (and thus
+  rarest) GO term shared by them.
 
+#### 2. GO term levels
 
+- GO term levels = depth in GO hierarchy
+- Deeper -> more specific (and, usually, less frequent)
 
+---
 
+## More recent attempts to measure functional similarity between genes
+
+![GOSim paper](assets/img/GOSim.png)
+
+<span class='caption'>Fröhlich et al. (2007)</span>
+
+---
+
+## Functional similarity vs. co-regulation
+
+### Minimum node count
+
+![Allocco fig 4](assets/img/1471-2105-5-18-4.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 4</span>
+
+---
+
+## Functional similarity vs. co-regulation
+
+### GO term level
+
+![Allocco fig 5](assets/img/1471-2105-5-18-5.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 5</span>
+
+---
+
+## Functional similarity vs. co-regulation
+
+### Correlation between co-regulation and two measures
+
+- Both similarity measures shown to correlate to an extent with co-regulation.
+- Limitations:
+    - Minimum node count has issues with large groups of closely related genes 
+      (e.g. ribosomal protein outliers in fig. 4)
+    - GO level measure becomes problematic with respect to the variability in
+      inclusiveness between the different ontologies.
 
 
 
@@ -197,5 +259,6 @@ $(function() {
 
 
 - Dominic J Allocco, Isaac S Kohane, Atul J Butte,   (2004) Unknown.  <em>Bmc Bioinformatics</em>  <strong>5</strong>  18-NA  <a href="http://dx.doi.org/10.1186/1471-2105-5-18">10.1186/1471-2105-5-18</a>
+- Holger Fröhlich, Nora Speer, Annemarie Poustka, Tim Beißbarth,   (2007) Gosim – an R-Package For Computation of Information Theoretic go Similarities Between Terms And Gene Products.  <em>Bmc Bioinformatics</em>  <strong>8</strong>  166-NA  <a href="http://dx.doi.org/10.1186/1471-2105-8-166">10.1186/1471-2105-8-166</a>
 - T. I. Lee,   (2002) Transcriptional Regulatory Networks in Saccharomyces Cerevisiae.  <em>Science</em>  <strong>298</strong>  799-804  <a href="http://dx.doi.org/10.1126/science.1075090">10.1126/science.1075090</a>
 

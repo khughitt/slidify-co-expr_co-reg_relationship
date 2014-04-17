@@ -164,7 +164,17 @@ known transcription factors in yeast.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="segue dark" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
@@ -203,7 +213,7 @@ Microarray Database)</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="smaller" id="slide-7" style="background:;">
+<slide class="smaller" id="slide-8" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
@@ -224,7 +234,7 @@ correlation this high!</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
@@ -246,7 +256,7 @@ network constructed from TF binding data.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
@@ -265,12 +275,12 @@ regulates.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Sub-sampling</h3>
+    <h3>Effect of adding more datasets</h3>
 
 <ul>
 <li>Initially all 611 microarrays used to calculate correlations</li>
@@ -284,31 +294,144 @@ different subsets of microarray data:
 </ol></li>
 <li>In general, adding more experiments increased sensitivity, although after
 ~100 experiments, you don&#39;t gain much more.</li>
+<li>Note: One thing they did not do is to test the effect of combining results
+from multiple sub-samples (e.g. using max{cor}.)</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/img/1471-2105-5-18-3.jpg" alt="Allocco fig 3">
+    <h3>Effect of adding more datasets</h3>
+
+<p><img src="assets/img/1471-2105-5-18-3.jpg" alt="Allocco fig 3">
 <span class='caption'>Allocco et al. (2004) Figure 3</span></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="references" id="slide-12" style="background:;">
+<slide class="segue dark" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Functional similarity vs. co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Functional similarity vs. co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Measuring functional similarity</h3>
+
+<ul>
+<li>In order to determine the relationship between co-regulation and function
+similarity, you must first decide how to measure functional similarity.</li>
+<li>Allocco et al. came up with two Gene Ontology (GO) based measures of
+similarity:</li>
+</ul>
+
+<h4>1. Minimum node count</h4>
+
+<ul>
+<li>For each GO term, how many times does it (or a descendant of it) appear in
+the data set?</li>
+<li>Minimum node count for a pair of genes in the value of the smallest (and thus
+rarest) GO term shared by them.</li>
+</ul>
+
+<h4>2. GO term levels</h4>
+
+<ul>
+<li>GO term levels = depth in GO hierarchy</li>
+<li>Deeper -&gt; more specific (and, usually, less frequent)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>More recent attempts to measure functional similarity between genes</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/GOSim.png" alt="GOSim paper"></p>
+
+<p><span class='caption'>Fröhlich et al. (2007)</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Functional similarity vs. co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Minimum node count</h3>
+
+<p><img src="assets/img/1471-2105-5-18-4.jpg" alt="Allocco fig 4">
+<span class='caption'>Allocco et al. (2004) Figure 4</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Functional similarity vs. co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>GO term level</h3>
+
+<p><img src="assets/img/1471-2105-5-18-5.jpg" alt="Allocco fig 5">
+<span class='caption'>Allocco et al. (2004) Figure 5</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Functional similarity vs. co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Correlation between co-regulation and two measures</h3>
+
+<ul>
+<li>Both similarity measures shown to correlate to an extent with co-regulation.</li>
+<li>Limitations:
+
+<ul>
+<li>Minimum node count has issues with large groups of closely related genes 
+(e.g. ribosomal protein outliers in fig. 4)</li>
+<li>GO level measure becomes problematic with respect to the variability in
+inclusiveness between the different ontologies.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="references" id="slide-19" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
   <article data-timings="">
     <ul>
 <li>Dominic J Allocco, Isaac S Kohane, Atul J Butte,   (2004) Unknown.  <em>Bmc Bioinformatics</em>  <strong>5</strong>  18-NA  <a href="http://dx.doi.org/10.1186/1471-2105-5-18">10.1186/1471-2105-5-18</a></li>
+<li>Holger Fröhlich, Nora Speer, Annemarie Poustka, Tim Beißbarth,   (2007) Gosim – an R-Package For Computation of Information Theoretic go Similarities Between Terms And Gene Products.  <em>Bmc Bioinformatics</em>  <strong>8</strong>  166-NA  <a href="http://dx.doi.org/10.1186/1471-2105-8-166">10.1186/1471-2105-8-166</a></li>
 <li>T. I. Lee,   (2002) Transcriptional Regulatory Networks in Saccharomyces Cerevisiae.  <em>Science</em>  <strong>298</strong>  799-804  <a href="http://dx.doi.org/10.1126/science.1075090">10.1126/science.1075090</a></li>
 </ul>
 
@@ -388,8 +511,50 @@ different subsets of microarray data:
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='References'>
+        data-slide=12 title='Co-expression and co-regulation'>
          12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Functional similarity vs. co-regulation'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Functional similarity vs. co-regulation'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='More recent attempts to measure functional similarity between genes'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Functional similarity vs. co-regulation'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Functional similarity vs. co-regulation'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Functional similarity vs. co-regulation'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='References'>
+         19
       </a>
     </li>
   </ul>

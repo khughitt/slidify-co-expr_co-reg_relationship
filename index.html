@@ -55,6 +55,8 @@
         max-width: 964px;
     }
     slide a {border-bottom: none;}
+    .smaller li { font-size: 20px; }
+    .caption { font-size: 14px; display: block; }
     .references li { font-size: 14px; }
     .references li p { font-size: 14px; }
 </style>
@@ -110,7 +112,8 @@ inference?</span></li>
     <h2>Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/img/Lee_F1.large.jpg" alt="Lee figure 1"></p>
+    <p><img src="assets/img/Lee_F1.large.jpg" alt="Lee figure 1">
+<span class='caption'>Lee et al. (2002) Figure 1</span></p>
 
 <ul>
 <li>Lee et al. describe an early use of chromatin immunoprecipitation
@@ -135,7 +138,8 @@ known transcription factors in yeast.</li>
     <h2>Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/img/Lee_F2.med.jpg" alt="Lee figure 2"></p>
+    <p><img src="assets/img/Lee_F2.med.jpg" alt="Lee figure 2">
+<span class='caption'>Lee et al. (2002) Figure 2</span></p>
 
 <ul>
 <li>Regulator/promoter relationships are many-to-many:
@@ -199,25 +203,106 @@ Microarray Database)</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="smaller" id="slide-7" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/img/1471-2105-5-18-1.jpg" alt="Allocco fig 1"></p>
+    <p><img src="assets/img/1471-2105-5-18-1.jpg" alt="Allocco fig 1">
+<span class='caption'>Allocco et al. (2004) Figure 1</span></p>
+
+<ul>
+<li>Genes whose expression profiles are highly correlated are likely to share a
+common promoter (high <em>positive</em> correlations)</li>
+<li>Requires high correlation, however: at \(r=0.84\) there is a 50% of gene
+pairs share a promoter.</li>
+<li>Of the 168,994 pairs with a known common TF, only 3.2% had a
+correlation this high!</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
   <article data-timings="">
-    
+    <p><img src="assets/img/1471-2105-5-18-2.jpg" alt="Allocco fig 2">
+<span class='caption'>Allocco et al. (2004) Figure 2</span></p>
+
+<ul>
+<li>&quot;Regulatory closeness&quot;, \(c(X,Y)\), relaxes restriction on direct TF/gene
+interaction and considers relationships that are one or more steps away on a
+network constructed from TF binding data.
+
+<ul>
+<li>\(c(X,Y)\) = 1 / # edges between genes</li>
+</ul></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="references" id="slide-9" style="background:;">
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/1471-2105-5-18-2.jpg" alt="Allocco fig 2">
+<span class='caption'>Allocco et al. (2004) Figure 2</span></p>
+
+<ul>
+<li>Regulatory closeness measure able to detect smaller effects</li>
+<li>Negative relationships</li>
+<li>Found no increase in correlation detect between a TF and the gene it 
+regulates.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Sub-sampling</h3>
+
+<ul>
+<li>Initially all 611 microarrays used to calculate correlations</li>
+<li>What would be the effect of using a smaller set of data?</li>
+<li>Allocco et al. next looked at correlations between expression profiles of
+different subsets of microarray data:
+
+<ol>
+<li>Randomly selected experiments</li>
+<li>Experiments related to cell-cycle, starvation, and stress.</li>
+</ol></li>
+<li>In general, adding more experiments increased sensitivity, although after
+~100 experiments, you don&#39;t gain much more.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Co-expression and co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/1471-2105-5-18-3.jpg" alt="Allocco fig 3">
+<span class='caption'>Allocco et al. (2004) Figure 3</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="references" id="slide-12" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -279,14 +364,32 @@ Microarray Database)</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title=''>
+        data-slide=8 title='Co-expression and co-regulation'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='References'>
+        data-slide=9 title='Co-expression and co-regulation'>
          9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Co-expression and co-regulation'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Co-expression and co-regulation'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='References'>
+         12
       </a>
     </li>
   </ul>

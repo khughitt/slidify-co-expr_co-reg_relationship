@@ -22,6 +22,8 @@ widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
         max-width: 964px;
     }
     slide a {border-bottom: none;}
+    .smaller li { font-size: 20px; }
+    .caption { font-size: 14px; display: block; }
     .references li { font-size: 14px; }
     .references li p { font-size: 14px; }
 </style>
@@ -60,6 +62,7 @@ $(function() {
 ## Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)
 
 ![Lee figure 1](assets/img/Lee_F1.large.jpg)
+<span class='caption'>Lee et al. (2002) Figure 1</span>
 
 - Lee et al. describe an early use of chromatin immunoprecipitation
   with microarray technology (ChIP-chip) to query the targets of a set of
@@ -75,6 +78,7 @@ $(function() {
 ## Transcriptional regulatory networks in Saccharomyces cerevisiae (Lee et al. 2002)
 
 ![Lee figure 2](assets/img/Lee_F2.med.jpg)
+<span class='caption'>Lee et al. (2002) Figure 2</span>
 
 - Regulator/promoter relationships are many-to-many:
   - Average of 38 promoters bound by a given regulator
@@ -105,13 +109,91 @@ $(function() {
 - Pearson correlation of expression profiles measured:
     - 2284 x 2284 symmetric matrix
 
----
+--- .smaller
 
 ## Co-expression and co-regulation
 
 ![Allocco fig 1](assets/img/1471-2105-5-18-1.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 1</span>
+
+- Genes whose expression profiles are highly correlated are likely to share a
+  common promoter (high *positive* correlations)
+- Requires high correlation, however: at $r=0.84$ there is a 50% of gene
+  pairs share a promoter.
+- Of the 168,994 pairs with a known common TF, only 3.2% had a
+  correlation this high!
 
 ---
+
+
+## Co-expression and co-regulation
+
+![Allocco fig 2](assets/img/1471-2105-5-18-2.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 2</span>
+
+- "Regulatory closeness", $c(X,Y)$, relaxes restriction on direct TF/gene
+  interaction and considers relationships that are one or more steps away on a
+  network constructed from TF binding data.
+  - $c(X,Y)$ = 1 / # edges between genes
+
+---
+
+## Co-expression and co-regulation
+
+![Allocco fig 2](assets/img/1471-2105-5-18-2.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 2</span>
+
+- Regulatory closeness measure able to detect smaller effects
+- Negative relationships
+- Found no increase in correlation detect between a TF and the gene it 
+  regulates.
+
+---
+
+## Co-expression and co-regulation
+
+### Effect of adding more datasets
+
+- Initially all 611 microarrays used to calculate correlations
+- What would be the effect of using a smaller set of data?
+- Allocco et al. next looked at correlations between expression profiles of
+  different subsets of microarray data:
+    1. Randomly selected experiments
+    2. Experiments related to cell-cycle, starvation, and stress.
+- In general, adding more experiments increased sensitivity, although after
+  ~100 experiments, you don't gain much more.
+- Note: One thing they did not do is to test the effect of combining results
+  from multiple sub-samples (e.g. using max{cor}.)
+
+---
+
+## Co-expression and co-regulation
+
+### Effect of adding more datasets
+
+![Allocco fig 3](assets/img/1471-2105-5-18-3.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 3</span>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---.references
 

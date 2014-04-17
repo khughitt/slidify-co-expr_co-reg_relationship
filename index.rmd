@@ -25,7 +25,8 @@ github      :
         max-width: 964px;
     }
     slide a {border-bottom: none;}
-    .smaller li { font-size: 20px; }
+    .small li { font-size: 20px; }
+    .smaller li p { font-size: 16px; }
     .caption { font-size: 14px; display: block; }
     .references li { font-size: 14px; }
     .references li p { font-size: 14px; }
@@ -116,7 +117,7 @@ $(function() {
 - Pearson correlation of expression profiles measured:
     - 2284 x 2284 symmetric matrix
 
---- .smaller
+--- .small
 
 ## Co-expression and co-regulation
 
@@ -131,7 +132,6 @@ $(function() {
   correlation this high!
 
 ---
-
 
 ## Co-expression and co-regulation
 
@@ -246,10 +246,53 @@ $(function() {
       (e.g. ribosomal protein outliers in fig. 4)
     - GO level measure becomes problematic with respect to the variability in
       inclusiveness between the different ontologies.
+- <span class='red'>Caveat</span>: Interpretation is likely confounded by the
+  fact that many annotations are derrived from knowledge of regulatory
+  relationships.
+
+---.segue .dark
+
+## Using co-expression and functional similarity to predict co-regulation
+
+---
+
+## Using co-expression and functional similarity to predict co-regulation
+
+- How would picture improve if *both* co-expression and functional similarity
+  information is used?
+- May be useful for discerning significance of gene pairs with a moderate
+  correlation in expression profiles.
+
+---
+
+## Co-regulation vs. Co-expression and Functional Similarity as Defined by Minimum Node Count
+
+![Allocco fig 6](assets/img/1471-2105-5-18-6.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 6</span>
+
+---
+
+## Co-regulation vs. Co-expression and Functional Similarity as Defined by Level of GO Term Match
+
+![Allocco fig 7](assets/img/1471-2105-5-18-7.jpg)
+<span class='caption'>Allocco et al. (2004) Figure 7</span>
 
 ---.segue .dark
 
 ## Conclusions
+
+---
+
+## Conclusions
+
+- Genes with *high* correlations in expression patterns are likely to be
+  co-regulated (using common TF-binding as a proxy for co-regulation.)
+- Because correlation must be very high, however, caution is advised when
+  interpeting the relationship between genes with lower correlation levels in
+  the expression profiles.
+- More data provides better signal, up to a point.
+- Functional annotations may also be useful to improve ability to discern
+  co-regulatory relationships.
 
 ---
 
@@ -261,12 +304,13 @@ $(function() {
    over the past ten years?
 3. Could a better result be achieved if the correlations of multiple subsamples
    were combined additively instead of treating them independently?
-4. What implications do these results have for systems which do not regulate
+4. Would picture change when using RNA-Seq instead of microarray data?
+5. What implications do these results have for systems which do not regulate
    genes at the promoter level?
-5. Big picture: What would be required to accurately model expression data
+6. Big picture: What would be required to accurately model expression data
    including co-expression relationships? (would vary between species).
 
----
+---.smaller
 
 ## Atul Butte talk
 
@@ -274,6 +318,21 @@ $(function() {
     <img src='http://img.youtube.com/vi/dtNMA46YgX4/0.jpg' border=0/><br/>
     What if you outsource three double-blind mice? (TEDMED 2012)
 </a><br/>
+
+### Some other interesting papers by Atul:
+
+```{r abutte_refs, include=FALSE}
+library(knitcitations)
+cleanbib()
+citep('10.1006/jbin.2002.1037')
+citep('10.1371/journal.pcbi.1002375')
+```
+
+- Butte AJ, Kohane IS. (2000) Mutual information relevance networks: functional
+    genomic clustering using pairwise entropy measurements
+```{r abutte_refs_output, echo=FALSE, results='asis'}
+bibliography('html')
+```
 
 ---.references
 

@@ -58,7 +58,8 @@
         max-width: 964px;
     }
     slide a {border-bottom: none;}
-    .smaller li { font-size: 20px; }
+    .small li { font-size: 20px; }
+    .smaller li p { font-size: 16px; }
     .caption { font-size: 14px; display: block; }
     .references li { font-size: 14px; }
     .references li p { font-size: 14px; }
@@ -216,7 +217,7 @@ Microarray Database)</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="smaller" id="slide-8" style="background:;">
+<slide class="small" id="slide-8" style="background:;">
   <hgroup>
     <h2>Co-expression and co-regulation</h2>
   </hgroup>
@@ -421,6 +422,9 @@ rarest) GO term shared by them.</li>
 <li>GO level measure becomes problematic with respect to the variability in
 inclusiveness between the different ontologies.</li>
 </ul></li>
+<li><span class='red'>Caveat</span>: Interpretation is likely confounded by the
+fact that many annotations are derrived from knowledge of regulatory
+relationships.</li>
 </ul>
 
   </article>
@@ -428,6 +432,56 @@ inclusiveness between the different ontologies.</li>
 </slide>
 
 <slide class="segue dark" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Using co-expression and functional similarity to predict co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Using co-expression and functional similarity to predict co-regulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>How would picture improve if <em>both</em> co-expression and functional similarity
+information is used?</li>
+<li>May be useful for discerning significance of gene pairs with a moderate
+correlation in expression profiles.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Co-regulation vs. Co-expression and Functional Similarity as Defined by Minimum Node Count</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/1471-2105-5-18-6.jpg" alt="Allocco fig 6">
+<span class='caption'>Allocco et al. (2004) Figure 6</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Co-regulation vs. Co-expression and Functional Similarity as Defined by Level of GO Term Match</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/1471-2105-5-18-7.jpg" alt="Allocco fig 7">
+<span class='caption'>Allocco et al. (2004) Figure 7</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-23" style="background:;">
   <hgroup>
     <h2>Conclusions</h2>
   </hgroup>
@@ -437,7 +491,27 @@ inclusiveness between the different ontologies.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Conclusions</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Genes with <em>high</em> correlations in expression patterns are likely to be
+co-regulated (using common TF-binding as a proxy for co-regulation.)</li>
+<li>Because correlation must be very high, however, caution is advised when
+interpeting the relationship between genes with lower correlation levels in
+the expression profiles.</li>
+<li>More data provides better signal, up to a point.</li>
+<li>Functional annotations may also be useful to improve ability to discern
+co-regulatory relationships.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Questions (of mine...)</h2>
   </hgroup>
@@ -449,6 +523,7 @@ similarity (e.g. as provided by GOSim), were used?</li>
 over the past ten years?</li>
 <li>Could a better result be achieved if the correlations of multiple subsamples
 were combined additively instead of treating them independently?</li>
+<li>Would picture change when using RNA-Seq instead of microarray data?</li>
 <li>What implications do these results have for systems which do not regulate
 genes at the promoter level?</li>
 <li>Big picture: What would be required to accurately model expression data
@@ -459,7 +534,7 @@ including co-expression relationships? (would vary between species).</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
+<slide class="smaller" id="slide-26" style="background:;">
   <hgroup>
     <h2>Atul Butte talk</h2>
   </hgroup>
@@ -469,11 +544,20 @@ including co-expression relationships? (would vary between species).</li>
     What if you outsource three double-blind mice? (TEDMED 2012)
 </a><br/></p>
 
+<h3>Some other interesting papers by Atul:</h3>
+
+<ul>
+<li><p>Butte AJ, Kohane IS. (2000) Mutual information relevance networks: functional
+genomic clustering using pairwise entropy measurements</p></li>
+<li><p>Atul J. Butte, Ling Bao, Ben Y. Reis, Timothy W. Watkins, Isaac S. Kohane,   (2001) Comparing The Similarity of Time-Series Gene Expression Using Signal Processing Metrics.  <em>Journal of Biomedical Informatics</em>  <strong>34</strong>  396-405  <a href="http://dx.doi.org/10.1006/jbin.2002.1037">10.1006/jbin.2002.1037</a></p></li>
+<li><p>Purvesh Khatri, Marina Sirota, Atul J. Butte, Christos A. Ouzounis,   (2012) Ten Years of Pathway Analysis: Current Approaches And Outstanding Challenges.  <em>Plos Computational Biology</em>  <strong>8</strong>  e1002375-NA  <a href="http://dx.doi.org/10.1371/journal.pcbi.1002375">10.1371/journal.pcbi.1002375</a></p></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="references" id="slide-22" style="background:;">
+<slide class="references" id="slide-27" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -602,26 +686,56 @@ including co-expression relationships? (would vary between species).</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Conclusions'>
+        data-slide=19 title='Using co-expression and functional similarity to predict co-regulation'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Questions (of mine...)'>
+        data-slide=20 title='Using co-expression and functional similarity to predict co-regulation'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Atul Butte talk'>
+        data-slide=21 title='Co-regulation vs. Co-expression and Functional Similarity as Defined by Minimum Node Count'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='References'>
+        data-slide=22 title='Co-regulation vs. Co-expression and Functional Similarity as Defined by Level of GO Term Match'>
          22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Conclusions'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Conclusions'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Questions (of mine...)'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Atul Butte talk'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='References'>
+         27
       </a>
     </li>
   </ul>
